@@ -1,0 +1,30 @@
+<div *ngIf="showEditForm" class="edit">
+  <label>Name</label>
+  <input [(ngModel)]="newSpeaker.name" type="text" />
+  <label>Address</label>
+  <input [(ngModel)]="newSpeaker.address" type="text" />
+  <label>Rating</label>
+  <select [(ngModel)]="newSpeaker.rate">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  <label>Image</label>
+  <select [(ngModel)]="newSpeaker.image">
+    <option>./assets/images/1.jpg</option>
+    <option>./assets/images/2.jpg</option>
+    <option>./assets/images/3.jpg</option>
+    <option>./assets/images/4.jpg</option>
+    <option>./assets/images/5.jpg</option>
+    <option>./assets/images/6.jpg</option>
+    <option>./assets/images/7.jpg</option>
+    <option>./assets/images/8.jpg</option>
+    <option>./assets/images/9.jpg</option>
+    <option>./assets/images/10.jpg</option>
+  </select>
+  <button (click)="confirmEdit()" class="m-2 btn btn-primary">
+    Confirm Edit
+  </button>
+</div>

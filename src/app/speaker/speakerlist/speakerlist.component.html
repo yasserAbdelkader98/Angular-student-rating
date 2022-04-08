@@ -1,0 +1,53 @@
+<button *ngIf="hideImg" (click)="showImage()" class="mx-2 btn btn-primary">
+  Show Image
+</button>
+<button *ngIf="showImg" (click)="hideImage()" class="mx-2 btn btn-primary">
+  Hide Image
+</button>
+
+<table *ngIf="allSpeakers.length > 0" class="table table-dark">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Rating</th>
+      <div *ngIf="showImg">
+        <th>Image</th>
+      </div>
+      <th>handlers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of allSpeakers">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.address | stringConvert }}</td>
+      <td><app-stars [rating]="item.rate"></app-stars></td>
+      <div *ngIf="showImg">
+        <td><img width="50" height="50" [src]="item.image" /></td>
+      </div>
+      <td>
+        <button (click)="showDetails(item)" class="mx-2 btn btn-light">
+          Details
+        </button>
+        <button (click)="edit(item)" class="mx-2 btn btn-success">Edit</button>
+        <button (click)="remove(item.id)" class="mx-2 btn btn-danger">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-speakerdetails
+  [isdetails]="isdetails"
+  [speaker]="newSpeaker"
+></app-speakerdetails>
+
+<app-editspeaker
+  [showEditForm]="showEditForm"
+  [newSpeaker]="newSpeaker"
+></app-editspeaker>
+
+<app-addspeaker (addSpeaker)="saveNewSpeaker($event)"></app-addspeaker>

@@ -1,0 +1,13 @@
+.edit {
+  margin: 20px auto;
+  font-size: 15px;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add label {
+  font-weight: bold;
+}

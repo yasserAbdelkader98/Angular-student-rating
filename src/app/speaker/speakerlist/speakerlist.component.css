@@ -1,0 +1,10 @@
+table {
+  width: 60%;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 800px) {
+  table {
+    width: 100%;
+  }
+}

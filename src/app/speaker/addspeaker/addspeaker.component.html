@@ -1,0 +1,32 @@
+<div class="add">
+  <label>Id</label>
+  <input [(ngModel)]="newSpeaker.id" type="number" />
+  <label>Name </label>
+  <input [(ngModel)]="newSpeaker.name" type="text" />
+  <label>Address</label>
+  <input [(ngModel)]="newSpeaker.address" type="text" />
+  <label>Rating</label>
+  <select [(ngModel)]="newSpeaker.rate">
+    <option appHighlight>1</option>
+    <option appHighlight>2</option>
+    <option appHighlight>3</option>
+    <option appHighlight>4</option>
+    <option appHighlight>5</option>
+  </select>
+  <label>Image</label>
+  <select [(ngModel)]="newSpeaker.image">
+    <option>./assets/images/1.jpg</option>
+    <option>./assets/images/2.jpg</option>
+    <option>./assets/images/3.jpg</option>
+    <option>./assets/images/4.jpg</option>
+    <option>./assets/images/5.jpg</option>
+    <option>./assets/images/6.jpg</option>
+    <option>./assets/images/7.jpg</option>
+    <option>./assets/images/8.jpg</option>
+    <option>./assets/images/9.jpg</option>
+    <option>./assets/images/10.jpg</option>
+  </select>
+  <button (click)="saveNewSpeaker()" class="m-2 btn btn-primary">
+    Save new Speaker
+  </button>
+</div>

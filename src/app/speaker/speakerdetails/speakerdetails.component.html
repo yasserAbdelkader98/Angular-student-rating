@@ -1,0 +1,29 @@
+<div *ngIf="isdetails">
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>address</th>
+        <th>Rating</th>
+        <th>image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ speaker.id }}</td>
+        <td>{{ speaker.name }}</td>
+        <td>{{ speaker.address }}</td>
+        <td><app-stars [rating]="speaker.rate"></app-stars></td>
+        <td>
+          <img
+            width="100"
+            height="100"
+            style="border-radius: 50%"
+            [src]="speaker.image"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
